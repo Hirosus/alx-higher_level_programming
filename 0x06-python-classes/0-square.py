@@ -1,7 +1,7 @@
 #!/usr/bin/python3
   
   
- """ 
+""" 
  A simple program with only a class that describes 
  a square 
  """

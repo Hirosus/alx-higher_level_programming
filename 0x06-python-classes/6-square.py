@@ -1,8 +1,8 @@
 #!/usr/bin/python3 
- """a square class""" 
+"""a square class""" 
   
   
- class Square: 
+class Square: 
      """Derives a square """ 
      def __init__(self, size=0, position=(0, 0)): 
          """Initializes the data 

@@ -1,10 +1,10 @@
 #!/usr/bin/python3 
- """ 
+""" 
  A class that defines a square 
  """ 
   
   
- class Square: 
+class Square: 
      """ 
      This class defines a square on some conditions: 
          . with a private instance variable 
