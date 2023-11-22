@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+
 def raise_exception():
     try:
-        raise TypeError("This is a type exception.")
+        raise TypeError("Exception raised")
     except TypeError as e:
-        print("Exception caught:", e)
-        raise
+        # Handling the raised exception
+        print(e)
+
+# Uncomment the line below to test the function
+# raise_exception()
 

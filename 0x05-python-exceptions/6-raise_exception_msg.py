@@ -1,7 +1,10 @@
-#!/usr/bin/python3
 def raise_exception_msg(message=""):
-    try:
-        raise NameError(message)
-    except NameError as e:
-        print("Exception caught:", e)
-        raise
+    if message == "":
+        raise NameError("C is fun")
+
+# Example usage:
+try:
+    raise_exception_msg()
+except NameError as ne:
+    print(ne)
+
