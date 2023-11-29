@@ -1,0 +1,18 @@
+# File: tests/test_text_indentation.txt
+
+# Test Case 1
+>>> text_indentation("This is a sentence. This is another sentence.")
+This is a sentence
+
+This is another sentence
+
+# Test Case 2
+>>> text_indentation("One:Two?Three.Four!")
+One:
+
+Two?
+
+Three.
+
+Four!
+

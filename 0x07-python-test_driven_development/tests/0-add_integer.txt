@@ -1,0 +1,14 @@
+# File: tests/test_add_integer.txt
+
+# Test Case 1
+>>> add_integer(3, 5)
+8
+
+# Test Case 2
+>>> add_integer(-10, 2)
+-8
+
+# Test Case 3
+>>> add_integer(7.5, 2)
+9
+
