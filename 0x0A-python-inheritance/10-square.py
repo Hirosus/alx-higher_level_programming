@@ -1,46 +1,36 @@
 #!/usr/bin/python3
+"""
+Module 10-square.
+Creates a Square class.
+"""
 
-class BaseGeometry:
-    """Base Geometry class."""
-
-    def area(self):
-        """Raises an Exception with the message 'area() is not implemented'."""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """Validates value as an integer greater than 0."""
-        if type(value) is not int:
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
-
-class Rectangle(BaseGeometry):
-    """Rectangle class that inherits from BaseGeometry."""
-
-    def __init__(self, width, height):
-        """Initializes a Rectangle instance."""
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
-
-    def area(self):
-        """Calculates and returns the area of the rectangle."""
-        return self.__width * self.__height
-
-    def __str__(self):
-        """Returns a string representation of the rectangle."""
-        return f"[Rectangle] {self.__width}/{self.__height}"
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
-    """Square class that inherits from Rectangle."""
+    """Represents a square.
+    Private instance attribute size.
+    Public method area().
+    Inherits from Rectangle.
+    """
 
     def __init__(self, size):
-        """Initializes a Square instance."""
+        """Initializes a Square.
+        Args:
+            - size: size of the square
+        """
+
         self.integer_validator("size", size)
-        super().__init__(size, size)  # Call the parent class constructor with size for both width and height
+        super().__init__(size, size)
+        self.__size = size
 
     def __str__(self):
-        """Returns a string representation of the square."""
-        return f"[Square] {self._Rectangle__width}/{self._Rectangle__height}"
+        return super().__str__()
+
+    def area(self):
+        """Computes the area of a Square instance.
+        Overwrites the area() method from Rectangle.
+        """
+
+        return self.__size ** 2
 
