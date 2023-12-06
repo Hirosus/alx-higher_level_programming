@@ -1,16 +1,22 @@
 #!/usr/bin/python3
+"""
+This module provides functions for file operations.
+
+It includes functions to read and write text files.
+"""
 
 def write_file(filename="", text=""):
-    """Write a string to a text file and return the number of characters written.
+    """
+    Write a string to a text file (UTF8) and return the number of characters written.
 
-    Args:
-        filename (str): The name of the text file.
-        text (str): The string to write.
-
-    Returns:
-        int: The number of characters written.
+    :param filename: The name of the file to be written.
+    :type filename: str
+    :param text: The string to be written to the file.
+    :type text: str
+    :return: The number of characters written to the file.
+    :rtype: int
     """
     with open(filename, 'w', encoding='utf-8') as file:
-        characters_written = file.write(text)
-    return characters_written
+        char_count = file.write(text)
+    return char_count
 

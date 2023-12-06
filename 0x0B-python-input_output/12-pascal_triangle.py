@@ -1,14 +1,16 @@
 #!/usr/bin/python3
+"""
+This module defines a function for generating Pascal's triangle.
+"""
 
 def pascal_triangle(n):
-    """Generates Pascal's triangle up to the specified level.
+    """
+    Returns a list of lists of integers representing Pascal's triangle of n.
 
-    Args:
-        n (int): The level of Pascal's triangle.
-
-    Returns:
-        list of lists: A list of lists of integers representing Pascal's triangle.
-                       Returns an empty list if n <= 0.
+    :param n: The number of rows for Pascal's triangle.
+    :type n: int
+    :return: A list of lists representing Pascal's triangle.
+    :rtype: list of lists
     """
     if n <= 0:
         return []
